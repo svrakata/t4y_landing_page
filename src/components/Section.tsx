@@ -1,4 +1,4 @@
-import { Stack, SimpleGrid, Box, useMantineTheme } from "@mantine/core";
+import { Stack, SimpleGrid, Box, useMantineTheme, useMantineColorScheme } from "@mantine/core";
 import useGetScreenSize, { EScreenSize } from "../hooks/useGetScreenSize";
 import useScrollToSection from "../hooks/useScrollToSection";
 import { SectionItem } from "../types";
@@ -21,7 +21,7 @@ const Section: React.FC<SectionProps> = (props) => {
     const screenSize = useGetScreenSize();
     const cardOrientation = screenSize === EScreenSize.small ? "vertical" : "horizontal";
     const theme = useMantineTheme();
-
+    const { colorScheme } = useMantineColorScheme({ keepTransitions: true });
 
     const icons: any = {
         wand: (color: string, size: number) => <IconWand size={size} color={color} stroke={1} />,
@@ -38,9 +38,10 @@ const Section: React.FC<SectionProps> = (props) => {
         check: (color: string, size: number) => <IconSquareRoundedCheck size={size} color={color} stroke={1} />,
     }
 
+    const sectionBgColor = colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.bgDark[5];
 
     return (
-        <Stack p="lg" pb={180} gap={60} ref={scrollRef} bg={`${theme.colors.bgDark[5]}99`}>
+        <Stack p="lg" pb={180} gap={60} ref={scrollRef} bg={`${sectionBgColor}99`}>
             {label && <SectionHeader>{label}</SectionHeader>}
             <Box maw={appConfig.layout.containerWidth} w="100%" m="auto">
                 <SimpleGrid cols={columns} spacing="lg">

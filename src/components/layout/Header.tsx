@@ -32,7 +32,7 @@ const Header = ({ links }: HeaderSimpleProps) => {
     const { colorScheme, toggleColorScheme } = useMantineColorScheme({ keepTransitions: true });
     const navigate = useNavigate();
 
-    const iconColor = colorScheme === "dark" ? theme.colors.blue[4] : theme.colors.yellow[2];
+    const iconColor = colorScheme === "dark" ? theme.colors.yellow[4] : theme.colors.blue[4];
 
     return (
         <Group h={appConfig.layout.headerHeight} bg="transparent" align="center">
@@ -69,6 +69,7 @@ const Header = ({ links }: HeaderSimpleProps) => {
                             </Group>
                             <Switch
                                 size="md"
+                                color="gray.9"
                                 onLabel={<IconSun size="1rem" stroke={2.5} color={iconColor} />}
                                 offLabel={<IconMoonStars size="1rem" stroke={2.5} color={iconColor} />}
                                 onChange={toggleColorScheme}

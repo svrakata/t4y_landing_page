@@ -1,4 +1,4 @@
-import { useMantineTheme } from "@mantine/core";
+import { useMantineColorScheme, useMantineTheme } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
 import { useEffect, useRef } from "react";
 
@@ -12,6 +12,9 @@ const Wave: React.FC = () => {
     const phase3 = useRef(0);
     const phase4 = useRef(0);
     const theme = useMantineTheme();
+    const { colorScheme } = useMantineColorScheme({ keepTransitions: true });
+
+    const waveColor = colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.bgDark[5];
 
     const generateWavePath = () => {
         let pathData = `M 0 20 `;
@@ -34,6 +37,8 @@ const Wave: React.FC = () => {
         return pathData;
     };
 
+    console.log("ga",colorScheme)
+
     useEffect(() => {
         const updateWave = () => {
             const path = ref.current;
@@ -54,7 +59,7 @@ const Wave: React.FC = () => {
 
     return (
         <svg viewBox="0 0 100 20">
-            <path ref={ref} fill={`${theme.colors.bgDark[5]}99`}></path>
+            <path ref={ref} fill={`${waveColor}99`}></path>
         </svg>
     );
 };
