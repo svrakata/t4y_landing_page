@@ -1,7 +1,7 @@
 import { generateColors } from "@mantine/colors-generator";
-import { createTheme, virtualColor, DefaultMantineColor, MantineColorsTuple } from "@mantine/core";
+import { createTheme, virtualColor, DefaultMantineColor, MantineColorsTuple, colorsTuple } from "@mantine/core";
 
-type ExtendedCustomColors = "primary" | DefaultMantineColor;
+type ExtendedCustomColors = "primary" | "bg" | "text" | "textFixed" | DefaultMantineColor;
 
 declare module "@mantine/core" {
     export interface MantineThemeColorsOverride {
@@ -11,15 +11,33 @@ declare module "@mantine/core" {
 
 const theme = createTheme({
     primaryColor: "primary",
+    primaryShade: 3,
     colors: {
-        primaryLight: generateColors("#c0cf49"),
-        primaryDark: generateColors("#8b8b8b"),
-        primary: virtualColor({
-            name: "primary",
-            light: "primaryLight",
-            dark: "primaryDark",
+        primary: generateColors("#5474B4"),
+        bgLight: colorsTuple("#f5f4f0"),
+        bgDark: colorsTuple("#555555"),
+        bg: virtualColor({
+            name: "bg",
+            light: "bgLight",
+            dark: "bgDark",
         }),
+        boxLight: colorsTuple("#ffffff"),
+        boxDark: colorsTuple("#333333"),
+        box: virtualColor({
+            name: "box",
+            light: "boxLight",
+            dark: "boxDark",
+        }),
+        textLight: colorsTuple("#333333"),
+        textDark: colorsTuple("#ffffff"),
+        text: virtualColor({
+            name: "text",
+            light: "textLight",
+            dark: "textDark",
+        }),
+        textFixed: colorsTuple("#333333"),
     },
+    fontFamily: "'Quicksand', sans-serif;",
 });
 
 export default theme;

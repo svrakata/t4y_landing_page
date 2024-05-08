@@ -1,9 +1,10 @@
 import { Outlet, RouterProvider, createBrowserRouter } from "react-router-dom";
-import { EMenuDestination } from "./types";
 import Wrapper from "./components/layout/Wrapper";
 import Home from "./pages/Home";
+import { useAppState } from "./state/app";
 
 const App: React.FC = () => {
+    const appConfig = useAppState((state) => state.appConfig);
     const router = createBrowserRouter([
         {
             path: "/",
@@ -17,7 +18,7 @@ const App: React.FC = () => {
                     index: true,
                     element: <Home />,
                 },
-                ...Object.values(EMenuDestination).map((v) => ({ path: v, element: <Home /> })),
+                ...appConfig.headerMenus.map((v) => ({ path: v.to, element: <Home /> })),
             ],
         },
     ]);

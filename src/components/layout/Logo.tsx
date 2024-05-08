@@ -1,20 +1,21 @@
-import { Flex, Image, useMantineColorScheme } from "@mantine/core";
-const logoDark = "/assets/logo_dark.svg";
-const logoLight = "/assets/logo_light.svg";
-
+import { Flex, Text } from "@mantine/core";
+import useSchemeColors from "../../hooks/useSchemeColors";
+import { ABRIEVATION } from "../../constants/layout";
 interface Props {
     fill?: string;
     size?: number;
+    fontSize?: number;
 }
 
 const Logo: React.FC<Props> = (props) => {
-    const { size = 60 } = props;
-    const { colorScheme } = useMantineColorScheme();
-    const isDark = colorScheme === "dark";
+    const { size = 60, fontSize = 18 } = props;
+    const colors = useSchemeColors();
 
     return (
         <Flex w={size} h={size} align="center">
-            <Image src={isDark ? logoLight : logoDark} />
+            <Text fw="bold" fz={fontSize} c={colors.text}>
+                {ABRIEVATION}
+            </Text>
         </Flex>
     );
 };

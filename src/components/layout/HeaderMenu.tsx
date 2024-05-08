@@ -1,6 +1,7 @@
-import { Text } from "@mantine/core";
+import classes from "./Layout.module.css";
+
+import { Anchor, Text } from "@mantine/core";
 import { NavLink } from "react-router-dom";
-import useSchemeColors from "../../hooks/useSchemeColors";
 
 interface Props {
     to: string;
@@ -9,20 +10,22 @@ interface Props {
 
 const HeaderMenu: React.FC<Props> = (props) => {
     const { to, label } = props;
-    const colors = useSchemeColors();
     return (
-        <NavLink to={to} style={{ textDecoration: "none" }}>
+        <Anchor component={NavLink} to={to} style={{ textDecoration: "none" }}>
             {({ isActive }) => (
                 <Text
+                    className={classes.header_menu_text}
+                    fw="bold"
                     px="xs"
                     py={3}
-                    c={colors.text}
-                    bg={isActive ? colors.headerNavBgActive : colors.headerNavBg}
+                    lh={1}
+                    c="text"
+                    style={{ textDecoration: isActive ? "underline" : "none" }}
                 >
                     {label}
                 </Text>
             )}
-        </NavLink>
+        </Anchor>
     );
 };
 

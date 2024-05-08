@@ -1,0 +1,117 @@
+{
+    "title": "MaiJob",
+    "slogan": "Craft Your Path, Connect Your Future",
+    "description": ["MaiJob revolutionizes the job-seeking process with cutting-edge AI technology that streamline how you create, refine, and share your resume.", "From AI-driven enhancements and real-time feedback to personalized interview preparation, our platform equips you with everything needed to stand out in the competitive job market."],
+    "abrievation": "MJ",
+    "logoLight": "assets/images/logo-light.png",
+    "logoDark": "assets/images/logo-dark.png",
+    "layout": {
+        "headerHeight": 240,
+        "footerHeight": 200,
+        "containerWidth": 1800
+    },
+    "headerMenus": [
+        {
+            "label": "Home",
+            "to": "/"
+        },
+        {
+            "label": "Solutions",
+            "to": "/solutions"
+        }
+    ],
+    "sections": [
+        {
+            "id": "1",
+            "label": "Solutions",
+            "to": "/solutions",
+            "columns": 2,
+            "items": [
+                {
+                    "id": "1",
+                    "title": "Simple Creativity",
+                    "subtitle": "Quickly create perfect resumes from hundreds of customizable templates.",
+                    "description": "The Drag-and-Drop Builder on MonCV is a user-friendly tool designed to simplify the resume creation process. With hundreds of customizable templates at your fingertips, you can easily design a professional-looking CV that stands out. Whether you're aiming for a conservative industry or a creative field, our intuitive interface allows for effortless customization of every section. This feature not only saves time but also enhances your ability to present your qualifications in the best light possible.",
+                    "icon": "wand"
+                },
+                {
+                    "id": "2",
+                    "title": "Effortless Conversion",
+                    "subtitle": "Upload and transform existing PDF or Word resumes with AI precision.",
+                    "description": "The AI Imports feature of MonCV effortlessly transitions your existing resumes into our dynamic platform. Simply upload any standard PDF or Word document and watch as our intelligent technology seamlessly converts it into an editable format. This feature ensures that all your valuable information is preserved and enhances it for clarity and impact. It’s the perfect way to modernize your CV without starting from scratch.",
+                    "icon": "analyze"
+                },
+                {
+                    "id": "3",
+                    "title": "Instant Improvement",
+                    "subtitle": "AI identifies and corrects common resume mistakes automatically.",
+                    "description": "The CV Enhancer feature in MonCV harnesses the power of artificial intelligence to scrutinize and refine your resume. It automatically detects and corrects common errors, optimizes language for impact, and suggests improvements for clearer communication. By aligning your skills and experiences with industry standards, it ensures your CV stands out to recruiters. This intelligent tool is designed to elevate your professional presentation effortlessly, giving you a competitive edge in the job market.",
+                    "icon": "improvement"
+                },
+                {
+                    "id": "4",
+                    "title": "Tailored Fit",
+                    "subtitle": "Adapt your resume to align seamlessly with specific job descriptions.",
+                    "description": "CV Summarization tailors your resume to match the specifics of any job offer, ensuring a highly relevant application every time. Using advanced AI, it analyzes the job description and adapts your CV to highlight the skills and experiences that align best with the employer's needs. This feature not only enhances the visibility of your application but also significantly increases your chances of landing an interview.",
+                    "icon": "tailored"
+                },
+                {
+                    "id": "5",
+                    "title": "Perfect Pairing",
+                    "subtitle": "AI-driven system that connects candidates with ideal job opportunities.",
+                    "description": "MonCV’s Smart Matching feature leverages advanced AI algorithms to analyze your skills, experiences, and career preferences, matching you with ideal job opportunities. The system continuously learns from your interactions, refining its suggestions to ensure the best fit between job seekers and job offers. With this intelligent tool, you can discover roles that truly resonate with your professional aspirations and potential. Stay ahead in your career search with matches that are not just good, but perfect for you.",
+                    "icon": "puzzle"
+                },
+                {
+                    "id": "6",
+                    "title": "Global Reach",
+                    "subtitle": "Break language barriers with AI-powered resume translations.",
+                    "description": "Break through language barriers with MonCV's AI-powered translations, enabling you to craft and submit your CV in multiple languages effortlessly. This feature automatically converts your resume details into the desired language while maintaining the professional tone and nuances specific to each region. Ideal for international job seekers, it ensures your qualifications and experiences are perfectly presented, no matter the audience. Expand your job search globally without the complexities of language constraints.",
+                    "icon": "global"
+                },
+                {
+                    "id": "7",
+                    "title": "Verified Credibility",
+                    "subtitle": "Our team ensures the authenticity of your resume claims, from certificates to references.",
+                    "description": "Our Human Verification feature ensures the authenticity of your CV's claims, boosting your credibility with potential employers. The MonCV team meticulously checks educational qualifications, certifications, and professional references, confirming their validity. This rigorous validation process provides employers with confidence in your credentials, setting you apart in the job market. Trust MonCV to substantiate your achievements and present a thoroughly vetted, standout resume.",
+                    "icon": "credibility"
+                },
+                {
+                    "id": "8",
+                    "title": "Interactive Guidance",
+                    "subtitle": "Build your first CV with the help of an intelligent AI bot.",
+                    "description": "Build your first CV with our interactive AI Bot, a user-friendly assistant that guides you through the process step-by-step. The bot suggests optimizations and enhancements, ensuring your CV stands out with a professional touch. You can experiment with various templates and layouts, all tailored to your career goals and industry standards. This intuitive feature simplifies CV creation, making it accessible even to those entering the job market for the first time.",
+                    "icon": "robot"
+                },
+                {
+                    "id": "9",
+                    "title": "Stay Updated",
+                    "subtitle": "Manage all your CVs and receive alerts for jobs and matching candidates.",
+                    "description": "With this feature, you can manage multiple CVs and receive notifications about job openings that match your profile, as well as alerts when employers are looking for candidates like you. This bi-directional functionality not only keeps you informed of relevant opportunities but also notifies employers about your availability and suitability for their vacancies. Stay connected and ahead in the job market with MonCV’s smart alert system.",
+                    "icon": "notification"
+                },
+                {
+                    "id": "10",
+                    "title": "Deep Insight",
+                    "subtitle": "Find precise matches using AI-powered semantic search capabilities.",
+                    "description": "Semantic Search, uses advanced AI to understand the context and nuances of your job search queries, delivering highly relevant job matches. For example, if you search for 'senior project manager,' the system not only finds listings with that exact title but also identifies related roles like 'lead program coordinator' or 'project lead' that require similar skills and responsibilities. This feature ensures that you don't miss out on opportunities that match your experience and career goals, even if they're listed under different job titles.",
+                    "icon": "affiliate"
+                },
+                {
+                    "id": "11",
+                    "title": "Seamless Sharing",
+                    "subtitle": "Communicate directly with potential employers and share your CV with experts and friends for feedback, bypassing outdated methods.",
+                    "description": "Instantly share your CV with industry experts and friends for valuable feedback, or directly connect with job offerors through our streamlined communication platform. This feature eliminates the hassle of traditional email exchanges and PDF uploads, facilitating faster and more effective engagements. Enhance your job-seeking experience by leveraging collective insights and direct interactions, all within MonCV's ecosystem.",
+                    "icon": "share"
+                },
+                {
+                    "id": "12",
+                    "title": "Interview Ready",
+                    "subtitle": "An advanced bot prepares you for interviews by analyzing job details, company culture, and more, focusing on strengthening your presentation.",
+                    "description": "By analyzing the specific details of the job offer, company profile, product information, and cultural values, this intelligent bot tailors its training to highlight your strengths and address your weaknesses. It provides actionable feedback and a detailed list of improvement areas to ensure you're optimally prepared. This personalized approach helps you refine your presentation skills and boosts your confidence, making you ready to excel in your actual interview.",
+                    "icon": "check"
+                }
+            ]
+        }
+    ]
+}

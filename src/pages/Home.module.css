@@ -1,0 +1,16 @@
+.hero_button {
+    font-style: italic;
+    height: 100px;
+    width: 480px;
+    flex-shrink: 0;
+
+    & :global(.mantine-Button-label) {
+        font-size: 26px;
+    }
+
+    & :global(.mantine-Button-label) {
+        font-size: 32px;
+        justify-content: center;
+        width: 100%;
+    }
+}

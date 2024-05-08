@@ -1,10 +1,10 @@
 import { ReactNode } from "react";
+import classes from "./Layout.module.css";
+
 import Header from "./Header";
 import { Box, Container } from "@mantine/core";
-import useSchemeColors from "../../hooks/useSchemeColors";
-import { HEADER_HEIGHT } from "../../constants/layout";
 import Footer from "./Footer";
-import { EMenuDestination } from "../../types";
+import { useAppState } from "../../state/app";
 
 interface Props {
     children: ReactNode;
@@ -13,42 +13,12 @@ interface Props {
 
 const Wrapper: React.FC<Props> = (props) => {
     const { container } = props;
-    const colors = useSchemeColors();
-    const links: { link: string; label: string }[] = [
-        {
-            label: "Home",
-            link: `${EMenuDestination.home}`,
-        },
-        {
-            label: "What we do",
-            link: `${EMenuDestination.whatWeDo}`,
-        },
-        {
-            label: "GPT Solutions",
-            link: `${EMenuDestination.gptSolutions}`,
-        },
-        {
-            label: "Applications",
-            link: `${EMenuDestination.industryApplications}`,
-        },
-        {
-            label: "Zmei solutions",
-            link: `${EMenuDestination.zmeiSolutions}`,
-        },
-        {
-            label: "Pricing",
-            link: `${EMenuDestination.pricing}`,
-        },
-        {
-            label: "Contact us",
-            link: `${EMenuDestination.contact}`,
-        },
-    ];
+    const appConfig = useAppState((state) => state.appConfig);
 
     return (
-        <Box bg={colors.background} mih={`calc(100vh - ${HEADER_HEIGHT}px)`}>
-            <Header links={links} />
-            <Box pb={140}>
+        <Box bg="bg" className={classes.wrapper}>
+            <Header links={appConfig.headerMenus} />
+            <Box>
                 {container && <Container size="md">{props.children}</Container>}
                 {!container && <>{props.children}</>}
             </Box>
