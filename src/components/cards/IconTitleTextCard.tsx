@@ -1,7 +1,6 @@
 import { useMantineColorScheme, Group, Text, List, Stack, Box } from "@mantine/core";
 import { ReactNode } from "react";
 import useSchemeColors from "../../hooks/useSchemeColors";
-import { HiChevronDoubleRight } from "react-icons/hi";
 
 interface Props {
     title: string;
@@ -22,23 +21,23 @@ const IconTitleTextCard: React.FC<Props> = (props) => {
         <Stack
             px={30}
             py={40}
-            sx={(theme) => ({ borderRadius: theme.radius.md, boxShadow: colors.boxShadow })}
+            style={(theme) => ({ borderRadius: theme.radius.md, boxShadow: colors.boxShadow })}
             bg={colorScheme === "dark" ? colors.boxBackground : "transparent"}
-            spacing="xl"
+            gap="xl"
         >
-            <Container maw={500} noWrap>
-                <Group align="center" w={90} h={90} position="center">
+            <Container maw={500}>
+                <Group align="center" w={90} h={90} justify="center">
                     {icon}
                 </Group>
-                <Text color={colors.text} fw="bold" size={32} lh={1}>
+                <Text c={colors.text} fw="bold" fz={32} lh={1}>
                     {title}
                 </Text>
             </Container>
             <List
-                sx={{ alignSelf: "flex-start" }}
+                style={{ alignSelf: "flex-start" }}
                 icon={
                     <Box pt={4}>
-                        <HiChevronDoubleRight size={18} color={colors.listBullet} />
+                        {/* <HiChevronDoubleRight size={18} color={colors.listBullet} /> */}
                     </Box>
                 }
                 spacing="md"

@@ -1,4 +1,4 @@
-import { Box, Group, Text, useMantineColorScheme } from "@mantine/core";
+import { Group, Text, useMantineColorScheme } from "@mantine/core";
 import { ReactNode } from "react";
 import useSchemeColors from "../../hooks/useSchemeColors";
 
@@ -16,15 +16,14 @@ const IconTextCard: React.FC<Props> = (props) => {
             py={30}
             pl="md"
             pr="lg"
-            sx={(theme) => ({ borderRadius: theme.radius.md, boxShadow: colors.boxShadow })}
+            style={(theme) => ({ borderRadius: theme.radius.md, boxShadow: colors.boxShadow })}
             bg={colorScheme === "dark" ? colors.boxBackground : "transparent"}
-            noWrap
             align="center"
         >
-            <Group align="center" w={70} h={70} position="center">
+            <Group align="center" w={70} h={70} justify="center">
                 {icon}
             </Group>
-            <Text size="lg" lh={1.5} sx={{ flexGrow: 1 }}>
+            <Text size="lg" lh={1.5} style={{ flexGrow: 1 }}>
                 {text}
             </Text>
         </Group>

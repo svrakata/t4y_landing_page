@@ -8,7 +8,7 @@ interface Props extends BoxProps {
 }
 
 const Card: React.FC<Props> = (props) => {
-    const { children, sx, noShadow = false, ...rest } = props;
+    const { children, style, noShadow = false, ...rest } = props;
     const { colorScheme } = useMantineColorScheme();
     const colors = useSchemeColors();
     return (
@@ -21,7 +21,7 @@ const Card: React.FC<Props> = (props) => {
                     borderRadius: theme.radius.md,
                     color: colors.text,
                 }),
-                Array.isArray(sx) ? undefined : sx,
+                Array.isArray(style) ? undefined : style,
             ]}
             {...rest}
         >
