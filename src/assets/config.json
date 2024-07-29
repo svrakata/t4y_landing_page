@@ -1,8 +1,8 @@
 {
-    "title": "MaiJob",
+    "title": "BigYes",
     "slogan": "Craft Your Path, Connect Your Future",
-    "description": ["MaiJob revolutionizes the job-seeking process with cutting-edge AI technology that streamline how you create, refine, and share your resume.", "From AI-driven enhancements and real-time feedback to personalized interview preparation, our platform equips you with everything needed to stand out in the competitive job market."],
-    "abrievation": "MJ",
+    "description": ["BigYes revolutionizes the job-seeking process with cutting-edge AI technology that streamline how you create, refine, and share your resume.", "From AI-driven enhancements and real-time feedback to personalized interview preparation, our platform equips you with everything needed to stand out in the competitive job market."],
+    "abrievation": "BY",
     "logoLight": "assets/images/logo-light.png",
     "logoDark": "assets/images/logo-dark.png",
     "layout": {

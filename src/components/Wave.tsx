@@ -2,8 +2,6 @@ import { useMantineColorScheme, useMantineTheme } from "@mantine/core";
 import { useWindowScroll } from "@mantine/hooks";
 import { useEffect, useRef } from "react";
 
-
-
 const Wave: React.FC = () => {
     const [scroll] = useWindowScroll();
     const ref = useRef<SVGPathElement>(null);
@@ -22,7 +20,6 @@ const Wave: React.FC = () => {
         // const minAmplitude = 1
         // const amplitude = minAmplitude + (maxAmplitude - minAmplitude) * scrollPercentage; // Calculate dynamic amplitude
 
-
         for (let x = 0; x <= 100; x += 0.1) {
             let y = 7;
             // Distinct waves with different frequencies and phases
@@ -36,8 +33,6 @@ const Wave: React.FC = () => {
         pathData += "L 100 20 Z"; // Return to bottom-right corner and close the path
         return pathData;
     };
-
-    console.log("ga",colorScheme)
 
     useEffect(() => {
         const updateWave = () => {

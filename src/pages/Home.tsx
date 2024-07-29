@@ -5,14 +5,12 @@ import { useAppState } from "../state/app";
 import Section from "../components/Section";
 import Wave from "../components/Wave";
 import { animated, useSpring } from "@react-spring/web";
-import { useEffect, useState } from "react";
 
 const Home: React.FC = () => {
     const appConfig = useAppState((state) => state.appConfig);
     const screenSize = useGetMediaQueries();
     const theme = useMantineTheme();
 
-    const [transition, setTransition] = useState(4);
 
     const stackStyles = {
         spacing: {
@@ -28,25 +26,10 @@ const Home: React.FC = () => {
     };
 
     const spring = useSpring({
-        borderColor: theme.colors.gray[transition],
+        borderColor: theme.colors.gray[4],
     });
 
-    useEffect(() => {
-        let current = 2;
-        let incrementing = true;
-        const interval = setInterval(() => {
-            if (current === 4) {
-                incrementing = false;
-            } else if (current === 2) {
-                incrementing = true;
-            }
-            // Change the current value based on the direction
-            current += incrementing ? 1 : -1;
 
-            setTransition(current);
-        }, 1000);
-        return () => clearInterval(interval);
-    }, []);
 
     return (
         <>

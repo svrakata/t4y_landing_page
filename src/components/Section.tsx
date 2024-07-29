@@ -5,7 +5,20 @@ import { SectionItem } from "../types";
 import SectionHeader from "./SectionHeader";
 import ImageTextCard from "./cards/ImageTextCard";
 import { useAppState } from "../state/app";
-import { IconAffiliate, IconAnalyze, IconNeedleThread, IconNotification, IconPuzzle, IconRobot, IconScan, IconShare, IconSquareRoundedCheck, IconTrendingUp3, IconWand, IconWorldLatitude } from "@tabler/icons-react";
+import {
+    IconAffiliate,
+    IconAnalyze,
+    IconNeedleThread,
+    IconNotification,
+    IconPuzzle,
+    IconRobot,
+    IconScan,
+    IconShare,
+    IconSquareRoundedCheck,
+    IconTrendingUp3,
+    IconWand,
+    IconWorldLatitude,
+} from "@tabler/icons-react";
 
 interface SectionProps {
     label?: string;
@@ -36,7 +49,7 @@ const Section: React.FC<SectionProps> = (props) => {
         affiliate: (color: string, size: number) => <IconAffiliate size={size} color={color} stroke={1} />,
         share: (color: string, size: number) => <IconShare size={size} color={color} stroke={1} />,
         check: (color: string, size: number) => <IconSquareRoundedCheck size={size} color={color} stroke={1} />,
-    }
+    };
 
     const sectionBgColor = colorScheme === "dark" ? theme.colors.dark[4] : theme.colors.bgDark[5];
 
